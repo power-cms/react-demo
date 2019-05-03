@@ -1,0 +1,42 @@
+@import '~bootstrap/scss/bootstrap.scss';
+
+#root {
+  height: 100vh;
+  flex-direction: column;
+
+  > div {
+    display: flex;
+    flex: 1;
+    padding-top: 2rem;
+    position: relative;
+  }
+}
+
+.navbar {
+  flex: 0;
+}
+
+.page {
+  background: $white;
+  overflow-y: scroll;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+
+  &.fade-enter {
+    opacity: 0;
+    z-index: 1;
+
+    &.fade-enter-active {
+      opacity: 1;
+      transition: opacity 150ms ease-in;
+    }
+  }
+}
+
+blockquote {
+  border-left: 3px solid $teal;
+  padding: 10px 20px;
+}
